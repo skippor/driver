@@ -2,9 +2,6 @@
 #include <linux/module.h>          
 #include <linux/kernel.h>   
 
-//指定license版本
-MODULE_LICENSE("GPL");              
-
 //设置初始化入口函数
 static int __init hello_world_init(void)
 {
@@ -21,3 +18,8 @@ static void __exit hello_world_exit(void)
 //将上述定义的init()和exit()函数定义为模块入口/出口函数
 module_init(hello_world_init);
 module_exit(hello_world_exit);
+
+//指定license版本
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("xxx");
+MODULE_DESCRIPTION("A sample driver");
